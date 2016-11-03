@@ -1,0 +1,43 @@
+<html>
+<head>
+<title> My Webpage </title>
+<script>
+	function submitFunction()
+	{
+		var x=document.forms["myForm"]["username"].value;
+		var y=document.forms["myForm"]["pwd"].value;
+		if(x==null||x==""||y==null||y=="")
+		{
+			alert("both fields can't be empty");
+		}
+		else
+		{
+			if(x=="user")
+			{
+				if(y=="1234")
+				{
+					alert("Login successful");
+				}
+				else
+				{
+					alert("password don't match");
+				}
+			}
+				else
+				{
+					alert("user doesn't exist");
+				}
+			
+		}
+	}
+</script>
+</head>
+<body>
+<form name="myForm" onsubmit="submitFunction()">
+Username:<input type="text" name="username"><br>
+Password:<input type="password" name="pwd"><br>
+<input type="submit" value="Submit">
+
+</form>
+</body>
+</html>
