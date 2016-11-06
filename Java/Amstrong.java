@@ -22,7 +22,7 @@ private static void main(String[] args)
 	System.out.println(d);
 	if(d==e)
 		{
-		System.out.println("It is Amstrong number");
+		System.out.println("It's Amstrong number");
 		}
 	else
 		{
