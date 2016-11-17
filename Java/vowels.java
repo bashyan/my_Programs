@@ -15,7 +15,7 @@ public class vowels
 				x++;			
 			}
 		}		
-		System.out.println("Number of vowels in the string is "+x+" by using if");
+		System.out.println("Number of vowels in the string is "+x+" by using if statement");
 		for(char A: ch)
 		{
 			switch(A)
