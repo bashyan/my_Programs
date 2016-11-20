@@ -1,0 +1,130 @@
+1. "Static" keyword:
+	In any code, the execution starts from the main() method. As java is an ‘Object Oriented’, 
+	a method can only be invoked by ‘Object’ of the class. It is necessary that java interpreter 
+	calls main() method before objects are created, hence in order to invoke main() without an object, 
+	we use the keyword ‘static’.
+
+	Also static keyword is used for memory management, it can be applied for method, variables etc...
+	It belongs to class rather than the instance of class.
+
+2. Override -  It is the feature of Object oriented concepts and is related to run-time polymorphism,
+	The method of sub class can have same implementation of super class. 
+
+	The Static method cannot be altered during run-time, hence static method cannot be overridden.
+
+	The private method is not visible to other class, so its not possible to override the private method.
+
+3. Accessing non-static variable in static context:
+	Static method is initialized while class is loaded, wherelse the non-static variable is declared only after the 
+	object is created, so complier doesn't know the non-static variable while static context is initiated.
+
+4. Data types supported by java:
+	1. boolean
+	2. byte
+	3. short
+	4. int
+	5. long
+	6. float
+	7. double
+	8. char    
+
+5. Autoboxing: It is a part of wrapper class, where the primitive data type is converted to respective 
+		reference type(wrapper class object) automatically. eg. int to Integer
+   Unboxing  : Unboxing is conversionof  the wrapper class object(reference type) to its respective primitive data type. Eg. Integer to int.
+
+6. Abstract:  Abstract is a keyword which is used for a non defined but declared method(), when a class contain a abstract method, then 
+		the class becomes abstract class. Abstract class is used to provide a template for a series of subclasses, all of which may inherit
+		some of their functionality from super class but MUST implement some of it themselves. Eg. many subclasses of class shapes wanted to provide 
+		area() method, since the super class shapes cannot do this, it would be abstract.
+
+		Abstract class makes the outline(customer requirement in intial stage) of the project, such that the subclasses can make use of it. 
+		If some methods(common method like drivetype() FWD or AWD) should always have their own implementation then that method in abstract class is declared as abstract method.
+
+   Interface: It makes 100% abstraction, that it gives only the outline and has no implementation. To have multiple inheritance in java, interface is used. A sub class can inherit a super class and many interfaces.
+		Default for interface is public static final type; it doesn't describe IS-A relationship, rather it has implements. Interface don't instantiates rather it can have IS-A relationship with instance of subclass.
+
+		Abstract class										Interface
+	can have both abstract and non abstract methods.					have only abstract method.
+	doesn't support multiple inheritance.							supports multiple inheritance.
+	can have final, non-final, static and non-static variables. 				only static and final variables.
+	can have static methods, main method and construtor.					can't have static, main method aor constructor.
+	can provide implementation of interface.						can't provide implementation of abstract class.
+	sub class extends abstract class.							class implements interface.
+
+7. 		pass by value										pass by reference
+	It hold the actual data.							It holds the address of object which holds the reference of data.
+	The original data is hold, so when function manipulates, 			It access the copy of data, so the original data is not touched.
+	then the original data is altered.
+
+8. Java Collection Framwork - Interface:  Set, List, Queue, Dequeue.
+
+9. Iterator: It is used to traverse the collection and access the data element. It is also used to get, remove or modify the collections elements.
+
+10. Hash Map: It contain values based on key. It implements the map interface and extends AbsractMap class. 
+	It contains only unique elements, may have one null key and multiple null values and maintain no order.
+	HashMap<Integer,String> hm=new HashMap<Integer,String>(); hm.put(10,"A"); for(Map.Entry Q: hm.entrySet()){}
+	It's non synchronized, not thread safe and cannot be shared beyween many threads without proper sync code. 
+	it's fast and traversed by iterator. Iterator in hashmap is fail-fast.
+
+    Hashtable: It's a array of list, the position is identified by hashcode(). It implements Map interface and extends Dictionary class.
+	It contains only unique elements, not have any null key or values and it's synchronized. 
+	It's thread safe and can be shared with many threads. It's slow and traversed by iterator and enumerator. 	
+	Enumerator in hashtable is not fail-fast.
+
+11. 			Array								ArrayList
+		It has fixed size						Dynamic sized arrays
+		It's the basic java functionality				It's a java collection framework that implements List interface
+		Array is accessed by using []					ArrayList has set of methods to access elements and modiffy. 
+		Array size should be declared					ArrayList size may or may not be declared. 
+		Holds primitive data type and object				Holds only object. Autoboxing occurs. 
+		
+12. parseInt() is used to parse a string to integer. It belongs to the class Integer. 
+	It is used when the integer is read as string, the integer is stored in string 
+	format in a file or when fetching data from standard input device, so this string is converted to integer.
+
+13. StringBuffer class is used to create modifiable string. The string in StringBuffer class can be modified by using various 
+	methods like append(), reverse(), delete() etc...
+    It is synchronized and thread safe such that two threads cannot call the same methods simultaneously. It is less efficient.  
+
+    StringBuilder class is same as the StringBuffer class. it is non synchronized and not thread safe. it is more efficient.
+
+14. Finalize method: This method is called when the object is about to be garbage collected, the system resource release code is 
+	written inside the finalize() before getting garbage collected.
+
+15. Final is used to apply restrictions on class, method and variable. It is initialized only once. 
+ 	Final class can't be inherited, final method can't be overridden and final variable value can't be changed.
+	Final is a keyword.	
+
+	Finally is used to place important code after the try or catch block, it will be executed whether exception is handled or not.
+	Finally is a block.	
+
+	Finalize is used to perform clean up processing just before object is garbage collected.
+	Finalize is a method.
+
+16. Throw is used to explicitly throw exception. Checked exception cannot be thrown. It is followed by object. It is used inside method. 
+	Multiple exceptions cannot be thrown.
+
+    Throws is used to declare an exception. Checked exceptions can be thrown. It is followed by class. Multiple exceptions can be declared.
+	There may occur exception, so it's better to provide ex. handling codes.
+
+17. The super keyword in java is a reference variable that is used to refer immediate parent class object.
+	Whenever you create the instance of subclass, an instance of parent class is created implicitly 
+	i.e. referred by super reference variable.
+	super is used to refer immediate parent class instance variable.
+	super() is used to invoke immediate parent class constructor.
+	super is used to invoke immediate parent class method.
+
+18. JAR(Java Archive) is a package file format which is used aggregate many java class files, metadata, and other 
+	resources like text,image etc... typically jar is used to distribute application software or libraries on java platform.
+
+	In command prompt, go to java project directory, then enter the command jar -cf filename.jar *.java
+	JAR file consists of class files. These files will be used by the application at Runtime. These are advantageous that the application's 
+	performance improves since it need not compile the source code while running, Security of the application will be better since the class 
+	files code cannot be altered easily. 
+
+19. FileInputStream class is used to read stream of raw bytes from a file(audio, image, video). FileReader class is used to read stream of characters.
+
+20. FileOutputStream class is used to write stream of raw bytes to a file. FileWriter class is used to write stream of characters.
+ 
+
+
