@@ -1,2 +1,0 @@
-10001,Manager
-10002,President
