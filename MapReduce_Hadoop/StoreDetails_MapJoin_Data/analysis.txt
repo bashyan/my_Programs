@@ -1,0 +1,7 @@
+1. total sales for each store
+key store id
+value qty * price
+2. qty sold for each item store wise
+key item id
+value qty sold
+partiotion store id
