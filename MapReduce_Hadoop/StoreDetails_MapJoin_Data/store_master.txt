@@ -1,3 +1,0 @@
-11,Mumbai,MAH,400001
-12,Pune,MAH,424501
-13,Bangalore,KAR,561000
